@@ -23,7 +23,7 @@ public class grass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grass);
         counter = 1;
-        Button btn = (Button) findViewBy''Id(R.id.grass_next1);
+        Button btn = (Button) findViewById(R.id.grass_next1);
         btn.setEnabled(true);
         Button btn2 = (Button) findViewById(R.id.button2);
         btn2.setEnabled(false);

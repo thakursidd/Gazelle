@@ -64,7 +64,7 @@ public class calc extends AppCompatActivity
 
     double p=0;
 
-    private Button cb;2
+    private Button cb;
     private Button gb;
     private Button sb;
     private Button kb;

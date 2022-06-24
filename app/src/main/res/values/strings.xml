@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Gazelle</string>
     <string name="farm_name"></string>
+    <string name="coordinates"></string>
+    <string name="coordinates_info">"Please enter coordinates of the boundaries of your ranch, up to 20 points." </string>
     <string name="farm_size"></string>
     <string name="habitatsize"></string>
 
