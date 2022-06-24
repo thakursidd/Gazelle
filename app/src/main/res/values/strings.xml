@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Gazelle</string>
+    <string name="farm_name"></string>
+    <string name="farm_size"></string>
+    <string name="habitatsize"></string>
+
+
+    <string name="grass">Grass Components</string>
+    <string name="grass_info">Using the map found in the previous screen, choose four random points within each habitat. At each point, make a 1 x 1 square meter zone. Cut all the grass in the zone, dry it, and then measure the weight.</string>
+    <string name="grass_info_2">Cut grass in 1x1 meter region and weigh</string>
+    <string name="grass_next1">Next Habitat</string>
+    <string name="grass_enter">Finished</string>
+    <string name="grass_data1"></string>
+    <string name="grass_data2"></string>
+    <string name="grass_data3"></string>
+    <string name="grass_data4"></string>
+    <string name="grass_hab">Habitat 1</string>
+
+
+    <string name="shrub">Woody Components</string>
+    <string name="shrub_info">Using the map found in the previous screen, assess woody vegetation on four 100m transect with a 2m pole in each applicable habitat. </string>
+    <string name="shrub_info_2">Find plant height (highest crown height), Height of canopy bottom, horizontal canopy radius (crown radius), and species if possible. </string>
+    <string name="shrub_enter">Finished</string>
+    <string name="tree_next_tree">Next Tree</string>
+    <string name="tree_next_zone">Next Zone</string>
+    <string name="tree_next_habitat">Next Habitat</string>
+    <string name="tree_data_1"></string>
+    <string name="tree_data_2"></string>
+    <string name="tree_data_3"></string>
+    <string name="tree_data_4"></string>
+    <string name="tree_num">Tree 1</string>
+    <string name="tree_zone">Zone 1</string>
+    <string name="tree_hab">Habitat 1</string>
+    <string name="title_activity_grass">grass</string>
+
+    <string name="treetable_enter">Finished</string>
+    <string name="addtree">Add Tree</string>
+
+    <string name="calculate">Calculate</string>
+    <string name="calc_info">From the information provided, these are the results for the amount of livestock that can be raised on your ranch.</string>
+    <string name="calc_info_2">Maximum numbers of each animal for entire ranch</string>
+    <string name="calc_info_3">Total weight units of grass and woody vegetation</string>
+    <string name="calc_info_4">Optimal numbers of each animal</string>
+    <string name="calc_info_5">Use sliders to find combination of livestock to suit your needs. Sliders will automatically adjust until you lock them down.</string>
+    <string name="calc_data_cattle">Cattle</string>
+    <string name="calc_data_kudu">Kudu</string>
+    <string name="calc_data_impala">Impala</string>
+    <string name="calc_data_donkey">Donkey</string>
+    <string name="calc_data_springbok">Spring</string>
+    <string name="calc_data_wildebeest">Wilde</string>
+    <string name="calc_data_goat">Goat</string>
+    <string name="calc_data_sheep">Sheep</string>
+    <string name="add_animal">Add/Remove an animal</string>
+
+    <string name="economics">Economic Calculations</string>
+
+    <string name="go_button">Go! </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="tree_prompt">Tree No.</string>
+
+    <string-array name="tree_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>
