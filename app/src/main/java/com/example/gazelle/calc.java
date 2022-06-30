@@ -1,9 +1,12 @@
 package com.example.gazelle;
 
-import static com.example.gazelle.MainActivity.habsize;
+import static com.example.gazelle.personalinfo.habsize;
+import static com.example.gazelle.personalinfo.global_class_size;
+import static com.example.gazelle.personalinfo.global_class_num;
+import static com.example.gazelle.personalinfo.xpoints;
+
 import static com.example.gazelle.grass.grass_hab;
-import static com.example.gazelle.grass.counter;
-import static com.example.gazelle.MainActivity.farm_size;
+import static com.example.gazelle.personalinfo.farm_size;
 
 import static com.example.gazelle.personalinfo.ranch_name_full;
 import static com.example.gazelle.shrub.can_height;
@@ -49,6 +52,9 @@ public class calc extends AppCompatActivity
     public double BAU = 0;
     public double tot_b_vol = 0;
     double cf = 0.05;
+    //EDIT CONSTANTS
+    double grass_area_measurement = 0;
+    double woody_area_measurement = 0; //40 for 20m, 200 for 100m transect
     double BAU_const = 1500;
 
     double maxau = 0;
@@ -109,7 +115,7 @@ public class calc extends AppCompatActivity
         t1.setText(ranch_name_full);
         System.out.println("1");
         TextView h1 = (TextView) findViewById(R.id.habitatnumfinal);
-        h1.setText("# of Habitats: " + Integer.toString(counter));
+        //h1.setText("# of Habitats: " + Integer.toString(counter));
         System.out.println("1");
         TextView f1 = (TextView) findViewById(R.id.farm_size_display);
         System.out.println("1");
@@ -188,11 +194,9 @@ public void run(int p){
 }
     // To enable seekbars
     private void onRadioButtonSelected() {
-        int i = 0;
         for (SeekBar seekbar : mSeekbars) {
             seekbar.setEnabled(true);
             System.out.println("hi");
-            i++;
         }
     }
     // To enable seekbars
@@ -237,8 +241,6 @@ public void run(int p){
         a7.setText(Double.toString(animals[6]));
         TextView a8 = (TextView) findViewById(R.id.springbok_out);
         a8.setText(Double.toString(animals[7]));
-
-
     }
 
     public void displayFunc(int flag, int j, double p){
@@ -339,7 +341,7 @@ public void run(int p){
 
             }
         else {
-            maxau = AU * farm_size;
+            maxau = AU * farm_size; //TODO: not that accurate bc we calculate AU for average of farm rather than each specific habitat
             maxbau = BAU * farm_size;
             maxmaxau = maxau;
             maxmaxbau = maxbau;
@@ -370,20 +372,20 @@ public void run(int p){
         }
     }
     public void grasscalc(){
-        int avg1 = 0;
+        double avg1 = 0;
 
-
-        for(int i =0; i< counter; i++)
+        for(int i =0; i< global_class_num; i++)
         {
-            for(int j =0; j<4; j++) {
-                System.out.println("i" + i);
-                System.out.println("j" + j);
-                System.out.println((grass_hab[i][j]));
-                avg1 = (grass_hab[i][j]) + avg1;
-                System.out.println("avg" + avg1);
-
+            for(int k = 0; k < global_class_size; k++) {
+                for (int j = 0; j < 4; j++) {
+                    System.out.println("i" + i);
+                    System.out.println("j" + j);
+                    System.out.println((grass_hab[(i*global_class_size)+k][j]));
+                    avg1 = (grass_hab[(i*global_class_size)+k][j]) + avg1;
+                    System.out.println("avg" + avg1);
+                }
             }
-            kg_tot = ((habsize[i] * ((avg1* 2500) / 4.0)) + kg_tot);
+            kg_tot = (habsize[i] * (avg1 / (grass_area_measurement * 4 * global_class_size))) + kg_tot;
             System.out.println("kg" + kg_tot);
             avg1 = 0;
 
@@ -407,29 +409,30 @@ public void run(int p){
     {
         double rad = 0;
         double b_vol = 0;
-        double mes_size = 0;
-        int j =0;
-        for(int i =0; i< habnum; i++)
+        double b_vol_avg = 0;
+        for(int i =0; i< global_class_num; i++)
         {
-            j=0;
-            while(tree_height[i][j] > 0) {
-                System.out.println(i);
-                System.out.println(j);
-                System.out.println(tree_height[i][j]);
-                System.out.println(can_height[i][j]);
-                System.out.println(crown_rad[i][j]);
-                rad = (((((tree_height[i][j]) - (can_height[i][j]))/2.0)+(crown_rad[i][j]))/2.0);
-                System.out.println("rad" + rad);
-                b_vol = (((22/7.0)*(Math.pow((2-can_height[i][j]),2))/3.0)*((3*(rad))-(2-can_height[i][j])));
-                System.out.println(b_vol);
-                tot_b_vol = b_vol + tot_b_vol;
-                System.out.println(tot_b_vol);
-                j++;
+            for(int k = 0; k < global_class_size; k++) {
+                for (int j = 0; j < tree_height[1].length; j++) {
+                    while (tree_height[(i * global_class_size) + k][j] > 0) {
+                        System.out.println(i);
+                        System.out.println(j);
+                        System.out.println(tree_height[(i * global_class_size) + k][j]);
+                        System.out.println(can_height[(i * global_class_size) + k][j]);
+                        System.out.println(crown_rad[(i * global_class_size) + k][j]);
+                        rad = (((((tree_height[(i * global_class_size) + k][j]) - (can_height[(i * global_class_size) + k][j])) / 2.0) + (crown_rad[(i * global_class_size) + k][j])) / 2.0);
+                        System.out.println("rad" + rad);
+                        b_vol = (((22 / 7.0) * (Math.pow((2 - can_height[(i * global_class_size) + k][j]), 2)) / 3.0) * ((3 * (rad)) - (2 - can_height[(i * global_class_size) + k][j])));
+                        System.out.println(b_vol);
+                        b_vol_avg = b_vol_avg + b_vol;
+                    }
+                }
             }
+                tot_b_vol = (habsize[i] * (b_vol_avg / (woody_area_measurement * global_class_size))) + tot_b_vol;
+                System.out.println(tot_b_vol);
+                b_vol_avg = 0;
         }
-        mes_size = 200 * zonenum * habnum;
-        System.out.println(mes_size);
-        double tot_b_vol_hec = ((farm_size * 10000) / mes_size) * tot_b_vol;
+        double tot_b_vol_hec = tot_b_vol/farm_size;
         System.out.println(tot_b_vol_hec);
         double BU = tot_b_vol_hec * 2;
         BU = BU * cf;

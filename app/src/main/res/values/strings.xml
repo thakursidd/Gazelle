@@ -2,13 +2,17 @@
     <string name="app_name">Gazelle</string>
     <string name="farm_name"></string>
     <string name="coordinates"></string>
-    <string name="coordinates_info">"Please enter coordinates of the boundaries of your ranch, up to 20 points." </string>
+    <string name="coordinates_info">"Please enter coordinates of the boundaries of your ranch, up to 20 points with a comma separating x and y." </string>
     <string name="farm_size"></string>
     <string name="habitatsize"></string>
 
+    <string name="coord_num">"Point:  "</string>
+    <string name="coord_disp">" "</string>
+    <string name="main_info">"Please travel to the coordinate point listed above, enter grass and woody measurements, and then select next point."</string>
+    <string name="next_point_button">"Next Point"</string>
 
     <string name="grass">Grass Components</string>
-    <string name="grass_info">Using the map found in the previous screen, choose four random points within each habitat. At each point, make a 1 x 1 square meter zone. Cut all the grass in the zone, dry it, and then measure the weight.</string>
+    <string name="grass_info">Make a 1 x 1 square meter zone. Cut all the grass in the zone, dry it, and then measure the weight. Do this four times along a 20m line transect.</string>
     <string name="grass_info_2">Cut grass in 1x1 meter region and weigh</string>
     <string name="grass_next1">Next Habitat</string>
     <string name="grass_enter">Finished</string>
@@ -20,19 +24,15 @@
 
 
     <string name="shrub">Woody Components</string>
-    <string name="shrub_info">Using the map found in the previous screen, assess woody vegetation on four 100m transect with a 2m pole in each applicable habitat. </string>
+    <string name="shrub_info">Assess woody vegetation on a 20m line transect with 1m on each side.</string>
     <string name="shrub_info_2">Find plant height (highest crown height), Height of canopy bottom, horizontal canopy radius (crown radius), and species if possible. </string>
     <string name="shrub_enter">Finished</string>
     <string name="tree_next_tree">Next Tree</string>
-    <string name="tree_next_zone">Next Zone</string>
-    <string name="tree_next_habitat">Next Habitat</string>
     <string name="tree_data_1"></string>
     <string name="tree_data_2"></string>
     <string name="tree_data_3"></string>
     <string name="tree_data_4"></string>
-    <string name="tree_num">Tree 1</string>
-    <string name="tree_zone">Zone 1</string>
-    <string name="tree_hab">Habitat 1</string>
+    <string name="tree_num">Tree/Shrub: 1</string>
     <string name="title_activity_grass">grass</string>
 
     <string name="treetable_enter">Finished</string>
@@ -79,5 +79,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_listpoints">listpoints</string>
 
 </resources>

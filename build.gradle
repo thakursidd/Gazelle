@@ -8,5 +8,4 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-implementation("com.squareup.okhttp3:okhttp:4.9.0")
 

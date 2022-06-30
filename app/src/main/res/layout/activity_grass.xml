@@ -100,10 +100,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/button2"
@@ -126,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <!-- <Button
         android:id="@+id/grass_next1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UsingOnClickInXml" />
+        tools:ignore="UsingOnClickInXml" /> -->
 
     <ImageView
         android:id="@+id/imageView5"
@@ -151,15 +151,26 @@
         app:srcCompat="@drawable/gazelle_quadrant_technique" />
 
     <TextView
-        android:id="@+id/grass_hab"
+        android:id="@+id/grass_point_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="576dp"
-        android:text="@string/grass_hab"
-        android:textAlignment="center"
-        android:textSize="24sp"
+        android:layout_marginTop="271dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- <TextView
+         android:id="@+id/grass_hab"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="156dp"
+         android:layout_marginTop="576dp"
+         android:text="@string/grass_hab"
+         android:textAlignment="center"
+         android:textSize="24sp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
