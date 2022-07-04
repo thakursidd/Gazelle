@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="evi1">#5C3232</color>
+    <color name="evi2">#DA760C</color>
+    <color name="evi3">#FFEB3B</color>
+    <color name="evi4">#8BC34A</color>
+    <color name="evi5">#4CAF50</color>
+    <color name="evi6">#3F51B5</color>
+
 </resources>

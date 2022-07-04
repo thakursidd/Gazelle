@@ -1,7 +1,7 @@
 package com.example.gazelle;
 
 import static com.example.gazelle.MainActivity.global_point_counter;
-import static com.example.gazelle.MainActivity.numhab;
+import static com.example.gazelle.personalinfo.global_points_num;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,13 +15,12 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class shrub extends AppCompatActivity {
-    public static double[][] tree_height = new double[25][30];
-    public static double[][] can_height = new double[25][30];
-    public static double[][] crown_rad = new double[25][30];
-    public static double[][] ed_brows = new double[25][30];
+    public static double[][] tree_height = new double[global_points_num][30];
+    public static double[][] can_height = new double[global_points_num][30];
+    public static double[][] crown_rad = new double[global_points_num][30];
+    public static double[][] ed_brows = new double[global_points_num][30];
     public static int treenum = 0;
-    public static int zonenum = 1;
-    public static int habnum = 1;
+
 
 
     @Override

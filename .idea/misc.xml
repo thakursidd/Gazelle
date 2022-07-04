@@ -5,20 +5,26 @@
       <map>
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/drawable/rounded_button1.xml" value="0.1715" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_all_areas.xml" value="0.1333903377511757" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_allpoints.xml" value="0.19709277469003847" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_calc.xml" value="0.25" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_display_message.xml" value="0.4" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_grass.xml" value="0.264" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_hub.xml" value="0.20308250226654578" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_listpoints.xml" value="0.2" />
-        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_personalinfo.xml" value="0.29010416666666666" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_prevcalc.xml" value="0.24027362120564344" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_shrub.xml" value="0.264" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_tree.xml" value="0.264" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/activity_treetable.xml" value="0.2" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/fragment_first.xml" value="0.24027362120564344" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/grass.xml" value="0.264" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/recyclerview_layout.xml" value="0.2274476271911073" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/support_simple_spinner_dropdown_item.xml" value="0.24027362120564344" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/Gazelle2/app/src/main/res/layout/text_row_item.xml" value="0.19709277469003847" />
       </map>
     </option>
   </component>

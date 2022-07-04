@@ -1,6 +1,7 @@
 package com.example.gazelle;
 
 import static com.example.gazelle.MainActivity.global_point_counter;
+import static com.example.gazelle.personalinfo.global_points_num;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class grass extends AppCompatActivity {
     public static String EXTRA_MESSAGE = "";
-    public static double[][] grass_hab = new double[20][4];
+    public static double[][] grass_hab = new double[global_points_num][4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +43,17 @@ public class grass extends AppCompatActivity {
         grass_hab[x][2] = tryParse(e3.getText().toString());
         grass_hab[x][3] = tryParse(e4.getText().toString());
 
-
         e1.setText("");
         e2.setText("");
         e3.setText("");
         e4.setText("");
     }
-    public int tryParse(Object obj) {
-        int retVal;
+    public Double tryParse(Object obj) {
+        Double retVal;
         try {
-            retVal = Integer.parseInt((String) obj);
+            retVal = Double.parseDouble((String) obj);
         } catch (NumberFormatException nfe) {
-            retVal = 0; // or null if that is your preference
+            retVal = 0.0; // or null if that is your preference
         }
         return retVal;
     }

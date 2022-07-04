@@ -63,6 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="1172dp"
+            android:layout_marginEnd="333dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -417,9 +419,9 @@
             android:id="@+id/tk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="lockkudu"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="852dp"
+            android:onClick="lockkudu"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -428,8 +430,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:onClick="lockimpala"
             android:layout_marginTop="1060dp"
+            android:onClick="lockimpala"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -457,10 +459,12 @@
             android:id="@+id/tsp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="1284dp"
-            android:layout_marginEnd="324dp"
+            android:layout_marginEnd="333dp"
             android:onClick="lockspringbok"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
@@ -487,12 +491,12 @@
             android:id="@+id/add_animal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
             android:layout_marginTop="1384dp"
-            android:layout_marginEnd="106dp"
+            android:layout_marginBottom="128dp"
             android:text="@string/add_animal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -500,14 +504,12 @@
             android:id="@+id/economics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="1512dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="84dp"
             android:text="@string/economics"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/dkds"
@@ -769,7 +771,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="145dp"
             android:layout_marginTop="44dp"
-            android:text="TextView"
+            android:text="#Habitats"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -777,9 +779,9 @@
             android:id="@+id/farm_size_display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="265dp"
+            android:layout_marginStart="252dp"
             android:layout_marginTop="44dp"
-            android:text="TextView"
+            android:text="Area"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -810,6 +812,18 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="279dp" />
+
+        <Button
+            android:id="@+id/savedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1334dp"
+            android:text="Save Data"
+            android:onClick="savedata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -67,44 +67,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="525dp"
-            android:layout_marginBottom="238dp"
-            android:text="Previous Growing Season Data"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/button4"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="@+id/button4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="154dp"
-            android:layout_marginTop="549dp"
-            android:text="2021-22" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="147dp"
-            android:layout_marginBottom="172dp"
-            android:text="2020-21"
-            android:textColor="#FFFFFF"
-            app:iconTint="#000000" />
+            android:onClick="prevcalc"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="555dp"
+            android:text="Previous Calculations" />
 
         <Button
             android:id="@+id/button14"
@@ -123,8 +95,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="82dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="109dp"
             android:text="Regression/Projections" />
 
         <Button
