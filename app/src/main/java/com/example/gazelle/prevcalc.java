@@ -77,8 +77,8 @@ public class prevcalc extends AppCompatActivity implements MyRecyclerViewAdapter
             tempString = readFromFile(i, this);
             try {
                 JSONObject json = new JSONObject(tempString);
-                Integer id = Integer.valueOf(String.valueOf(json.getJSONObject("ID:")));
-                String time = String.valueOf(json.getJSONObject("Time:"));
+                Integer id = Integer.valueOf(String.valueOf(json.get("ID:")));
+                String time = String.valueOf(json.get("Time:"));
                 arraylist.add("ID: "+ id.toString() + ", Time: " + time.toString());
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -104,8 +104,8 @@ public class prevcalc extends AppCompatActivity implements MyRecyclerViewAdapter
         JSONObject json = null;
         try {
             json = new JSONObject(tempString);
-            Integer id = Integer.valueOf(String.valueOf(json.getJSONObject("ID:")));
-            String time = String.valueOf(json.getJSONObject("Time:"));
+            Integer id = Integer.valueOf(String.valueOf(json.get("ID:")));
+            String time = String.valueOf(json.get("Time:"));
             JSONArray grassarr = json.getJSONArray("Grass:");
             JSONArray treeheightarr = json.getJSONArray("Tree Height:");
             JSONArray canheightarr = json.getJSONArray("Canopy Height:");
