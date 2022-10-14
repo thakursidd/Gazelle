@@ -113,10 +113,9 @@ public void printlist()
     }
 }
     public void gohome(View view) {
-        Intent intent = new Intent(this, home.class);
         EditText e1 = (EditText) findViewById(R.id.ranch_name2);
         ranch_name_full = (e1.getText().toString());
-        startActivity(intent);
+        e1.setText(" ");
     }
 
     public void entercoordinates(View view) {

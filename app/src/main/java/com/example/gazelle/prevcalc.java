@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import static com.example.gazelle.grass.grass_hab;
+import static com.example.gazelle.personalinfo.global_class_num;
 import static com.example.gazelle.shrub.tree_height;
 import static com.example.gazelle.shrub.can_height;
 import static com.example.gazelle.shrub.crown_rad;
@@ -21,6 +22,7 @@ import static com.example.gazelle.personalinfo.xpoints;
 import static com.example.gazelle.calc.file_name;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -110,31 +112,32 @@ public class prevcalc extends AppCompatActivity implements MyRecyclerViewAdapter
             JSONArray treeheightarr = json.getJSONArray("Tree Height:");
             JSONArray canheightarr = json.getJSONArray("Canopy Height:");
             JSONArray crownradarr = json.getJSONArray("Crown Radius:");
-            for (int i = 0; i < grassarr.length(); i++) {
+            for (int i = 0; i < global_class_num; i++) {
+                for(int k = 0; k < global_class_size; k++) {
                     for (int j = 0; j < 4; j++) {
-                        System.out.println("grass: " + grassarr.getJSONArray(i).get(0).toString());
-                        grass_hab[i][0] = (Double.parseDouble(grassarr.getJSONArray(i).get(0).toString()));
-                        grass_hab[i][1] = (Double.parseDouble(grassarr.getJSONArray(i).get(1).toString()));
-                        grass_hab[i][2] = (Double.parseDouble(grassarr.getJSONArray(i).get(2).toString()));
-                        grass_hab[i][3] = (Double.parseDouble(grassarr.getJSONArray(i).get(3).toString()));
+                        System.out.println("grass: " + grassarr.get((i * global_class_size) + k).toString());
+                        grass_hab[(i * global_class_size) + k][j] = (Double.parseDouble(grassarr.get((i * global_class_size) + k).toString()));
                     }
                 }
-            for (int i = 0; i < treeheightarr.length(); i++) {
-                for (int j = 0; j < treeheightarr.getJSONArray(i).length(); j++) {
-                    System.out.println("treeheight: beginning:  " + treeheightarr.getJSONArray(i).get(j).toString());
-                    tree_height[i][j] = (Double.parseDouble(treeheightarr.getJSONArray(i).get(j).toString()));
-                    can_height[i][j] = (Double.parseDouble(canheightarr.getJSONArray(i).get(j).toString()));
-                    crown_rad[i][j] = (Double.parseDouble(crownradarr.getJSONArray(i).get(j).toString()));
-                    System.out.println("treeheight: beginning:  " + treeheightarr.getJSONArray(i).get(j).toString());
-                    System.out.println("treeheight:" + tree_height[i][j]);
-                    System.out.println("canheight:" + can_height[i][j]);
-                    System.out.println("crownrad:" + crown_rad[i][j]);
-
+                }
+            for (int i = 0; i < global_class_num; i++) {
+                for(int k = 0; k < global_class_size; k++){
+                for (int j = 0; j < 30; j++) {
+                    System.out.println("treeheight: beginning:  " + treeheightarr.get((i * global_class_size)+k).toString());
+                    tree_height[(i * global_class_size)+k][j] = (Double.parseDouble(treeheightarr.get((i * global_class_size)+k).toString()));
+                    can_height[(i * global_class_size)+k][j] = (Double.parseDouble(canheightarr.get((i * global_class_size)+k).toString()));
+                    crown_rad[(i * global_class_size)+k][j] = (Double.parseDouble(crownradarr.get((i * global_class_size)+k).toString()));
+                    System.out.println("treeheight:" + tree_height[(i * global_class_size)+k][j]);
+                    System.out.println("canheight:" + can_height[(i * global_class_size)+k][j]);
+                    System.out.println("crownrad:" + crown_rad[(i * global_class_size)+k][j]);
+                }
                 }
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        Intent intent = new Intent(this, calc.class);
+        startActivity(intent);
 
     }
 

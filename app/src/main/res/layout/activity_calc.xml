@@ -124,8 +124,8 @@
 
         <TextView
             android:id="@+id/wildebeest_data"
-            android:layout_width="65dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="1180dp"
             android:layout_marginEnd="30dp"
             android:text="@string/calc_data_wildebeest"
@@ -165,8 +165,8 @@
 
         <TextView
             android:id="@+id/donkey_data"
-            android:layout_width="42dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="964dp"
             android:layout_marginEnd="44dp"
             android:text="@string/calc_data_donkey"

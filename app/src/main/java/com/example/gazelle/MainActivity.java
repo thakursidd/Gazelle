@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 Button btn3 = (Button) findViewById(R.id.button5);
                 btn3.setEnabled(true);
                 Button btn6 = (Button) findViewById(R.id.previous_point);
-                btn6.setEnabled(false);
+                btn6.setEnabled(true);
                 Button btn5 = (Button) findViewById(R.id.next_point_button);
                 btn5.setEnabled(false);
             }
@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
             {
                 Button btn5 = (Button) findViewById(R.id.next_point_button);
                 btn5.setEnabled(false);
+                Button btn3 = (Button) findViewById(R.id.previous_point);
+                btn3.setEnabled(false);
                 Button btn1 = (Button) findViewById(R.id.button5);
                 btn1.setEnabled(true);
             }
